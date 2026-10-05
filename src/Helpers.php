@@ -1170,6 +1170,9 @@ class Helpers
                             case "http:user_agent":
                                 curl_setopt($curl, CURLOPT_USERAGENT, $value);
                                 break;
+                            case "curl:curl_resolve":
+                                curl_setopt($curl, CURLOPT_RESOLVE, $value);
+                                break;
                             case "curl:curl_verify_ssl_peer":
                             case "ssl:verify_peer":
                                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, $value);
